@@ -72,7 +72,7 @@ namespace NotesApiTests
 
             //Asserts
             Assert.IsType<UserResponse>(response);
-            Assert.Equal(user.Email, response.Email);
+            Assert.Equal(response.Id, data.First().Id);
         }
 
         [Fact]

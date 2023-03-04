@@ -1,0 +1,14 @@
+services:
+  app:
+    build:
+      context: .
+    depends_on:
+      - db
+    ports:
+      - 8080:80
+  db:
+    image: mcr.microsoft.com/mssql/server
+    restart: always
+    environment:
+      ACCEPT_EULA: "Y"
+      SA_PASSWORD: notes-ws-DB

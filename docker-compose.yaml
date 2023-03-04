@@ -12,3 +12,5 @@ services:
     environment:
       ACCEPT_EULA: "Y"
       SA_PASSWORD: notes-ws-DB
+    ports:
+      - 1433:1433

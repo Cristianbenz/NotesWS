@@ -7,6 +7,7 @@ namespace DB
         public NotesContext() { }
         public NotesContext(DbContextOptions<NotesContext> options) : base(options)
         {
+            Database.Migrate();
         }
 
         public virtual DbSet<Note> Note { get; set; }
